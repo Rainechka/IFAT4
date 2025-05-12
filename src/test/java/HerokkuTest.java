@@ -11,9 +11,8 @@ public class HerokkuTest extends BaseTest {
         browser.findElement(By.cssSelector("#username")).sendKeys("user1");
         browser.findElement(By.cssSelector("#password")).sendKeys("12345678");
         browser.findElement(By.xpath("//button[@type='submit']")).click();
-        String actualErrorMsg = browser.findElement(By.cssSelector("#flash-messages [class=\"flash error\"]")).getText().trim();
+        String actualErrorMsg = browser.findElement(By.cssSelector("#flash-messages [class='flash error']")).getText().trim();
         String expectedErrorMsg = "Your username is invalid!";
         assertTrue(actualErrorMsg.contains(expectedErrorMsg));
-
     }
 }
